@@ -1,8 +1,12 @@
-body {
-  background-color: black;
-  color: white;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+
 }
 
-h1 {
-  color: red;
+body {
+  background-color: rgb(62, 62, 62);
+  color: rgb(172, 169, 169);
 }
