@@ -1,10 +1,19 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  font-size: 32px;
-  border: 1px solid red
+  padding: 5px;
 
+  /* border: 1px solid red; */
+}
+
+body {
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+}
+
+button {
+  cursor: pointer;
 }
 
 .book {
@@ -12,15 +21,24 @@
   justify-content: space-between;
 }
 
-h1, h2 {
+.book-details {
+  display: flex;
+}
+
+h1,
+h2 {
   text-align: center;
 }
 
-.add-book {
+.add-title-and-author {
   display: flex;
   flex-direction: column;
 }
 
-.add-container {
+.add-button-container {
   text-align: right;
+}
+
+.hide {
+  display: none;
 }
