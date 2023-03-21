@@ -1,38 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Awesome Books</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-
-<body>
-  <div class="main">
-    <div class="list">
-      <h1>All awesome books</h1>
-      <div class="added-books">
-        <!-- here the books added list will be created dinamically -->
-        
+  <body>
+    <div class="main">
+      <div class="list">
+        <h1>All awesome books</h1>
+        <div class="added-books"></div>
       </div>
-    </div>
-    <div class="add-a-new-book">
-      <h2>Add a new book</h2>
-      <div class="add-title-and-author">
-        <input class="add-title" type="text" placeholder="Title" required>
-        <input class="add-author" type="text" placeholder="Author" required>
-        <div class="add-button-container">
-          <button type="submit" class="add-button">Add</button>
-        </div>
+      <div class="add-a-new-book">
+        <h2>Add a new book</h2>
+        <form class="add-title-and-author">
+          <input class="add-title" type="text" placeholder="Title" required />
+          <input class="add-author" type="text" placeholder="Author" required />
+          <div class="add-button-container">
+            <button type="submit" class="add-button">Add</button>
+          </div>
+        </form>
       </div>
+      <div class="contact">contact me!</div>
     </div>
-    <div class="contact">contact me!</div>
-  </div>
 
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
-
