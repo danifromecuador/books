@@ -59,6 +59,7 @@ window.addEventListener('load', () => {
   print();
 });
 
+// when the user clicks on add button the new book will be added and printer
 const addButton = document.querySelector('.add-button');
 addButton.addEventListener('click', () => {
   add();
