@@ -24,6 +24,15 @@ hr {
   align-items: center;
 }
 
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+#add-book-form {
+  width: 100%;
+}
+
 .bookList {
   border: 3px solid black;
   width: 100%;
@@ -41,4 +50,8 @@ ul {
 
 form {
   text-align: center;
+}
+
+input {
+  width: 80%;
 }
