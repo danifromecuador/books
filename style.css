@@ -10,8 +10,18 @@ body {
   color: white;
 }
 
-button {
-  cursor: pointer;
+.main {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookList {
+  border: 3px solid black;
+  width: 100%;
 }
 
 .book {
@@ -19,24 +29,11 @@ button {
   justify-content: space-between;
 }
 
-.book-details {
-  display: flex;
+ul {
+  margin: 0;
+  padding: 20px;
 }
 
-h1,
-h2 {
+form {
   text-align: center;
-}
-
-.add-title-and-author {
-  display: flex;
-  flex-direction: column;
-}
-
-.add-button-container {
-  text-align: right;
-}
-
-.hide {
-  display: none;
 }
