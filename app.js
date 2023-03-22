@@ -9,7 +9,7 @@ class Books {
     this.books.forEach((book) => {
       const li = document.createElement('li');
       li.classList.add('book');
-      li.innerHTML = `<div>${book.title} by ${book.author}</div>`;
+      li.innerHTML = `<div>"${book.title}" by ${book.author}</div>`;
       const removeButton = document.createElement('button');
       removeButton.innerHTML = 'Remove';
       removeButton.addEventListener('click', () => {
