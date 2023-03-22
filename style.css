@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 5px;
+}
+
+body {
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-details {
+  display: flex;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.add-title-and-author {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-button-container {
+  text-align: right;
+}
+
+.hide {
+  display: none;
+}
