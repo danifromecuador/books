@@ -2,16 +2,42 @@
   box-sizing: border-box;
   margin: 0;
   padding: 5px;
+  font-family: 'Comic Neue', cursive;
 }
 
 body {
   margin: 0 auto;
   background-color: black;
-  color: white;
+  color: wheat;
 }
 
-button {
-  cursor: pointer;
+hr {
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+#add-book-form {
+  width: 100%;
+}
+
+.bookList {
+  border: 3px solid black;
+  width: 100%;
 }
 
 .book {
@@ -19,24 +45,15 @@ button {
   justify-content: space-between;
 }
 
-.book-details {
-  display: flex;
+ul {
+  margin: 0;
+  padding: 20px;
 }
 
-h1,
-h2 {
+form {
   text-align: center;
 }
 
-.add-title-and-author {
-  display: flex;
-  flex-direction: column;
-}
-
-.add-button-container {
-  text-align: right;
-}
-
-.hide {
-  display: none;
+input {
+  width: 80%;
 }
