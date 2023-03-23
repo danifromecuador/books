@@ -47,18 +47,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
 
-    // check if the book is already in the list 
+    // check if the book is already in the list
     let booksArrays = [];
     if (localStorage.getItem('books')) {
       booksArrays = JSON.parse(localStorage.getItem('books'));
     }
-    for (let i = 0; i < booksArrays.length; i++) {
+    for (let i = 0; i < booksArrays.length; i += 1) {
       if (booksArrays[i].title === title && booksArrays[i].author === author) {
         alert('This book is already in your list');
         return;
       }
     }
-    
 
     books.addBook(title, author);
     form.reset();
