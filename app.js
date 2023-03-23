@@ -38,6 +38,7 @@ class Books {
   }
 }
 
+const alertMessage = document.querySelector('.alert-message');
 document.addEventListener('DOMContentLoaded', () => {
   const books = new Books();
   books.displayBooks();
@@ -48,18 +49,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const author = document.getElementById('author').value;
 
     // check if the book is already in the list
-    let booksArrays = [];
-    if (localStorage.getItem('books')) {
-      booksArrays = JSON.parse(localStorage.getItem('books'));
-    }
-    for (let i = 0; i < booksArrays.length; i += 1) {
-      if (booksArrays[i].title === title && booksArrays[i].author === author) {
-        alert('This book is already in your list');
-        return;
+    const booksArrays = JSON.parse(localStorage.getItem('books')) || [];
+    let bookExists = false;
+    if (booksArrays.length > 0) {
+      for (let i = 0; i < booksArrays.length; i += 1) {
+        if (booksArrays[i].title === title && booksArrays[i].author === author) {
+          bookExists = true;
+        }
+        if (bookExists) alertMessage.innerHTML = `The book ${title} by ${author} already exists`;
       }
     }
+    if (bookExists === false) {
+      books.addBook(title, author);
+    }
+    // end of the check
 
-    books.addBook(title, author);
     form.reset();
   });
+});
+
+const titleInput = document.querySelector('#title');
+titleInput.addEventListener('click', () => {
+  alertMessage.innerHTML = '';
 });
