@@ -13,9 +13,8 @@ class Books {
       const removeButton = document.createElement('button');
       removeButton.innerHTML = 'Remove';
       removeButton.addEventListener('click', () => {
-        this.removeBook(book.title);
+        this.removeBook(book);
       });
-
       li.appendChild(removeButton);
       booksList.appendChild(li);
       li.style.listStyleType = 'none';
@@ -31,8 +30,8 @@ class Books {
     this.displayBooks();
   }
 
-  removeBook(title) {
-    const newBooks = this.books.filter((book) => book.title !== title);
+  removeBook(book) {
+    const newBooks = this.books.filter((b) => b.title !== book.title || b.author !== book.author);
     localStorage.setItem('books', JSON.stringify(newBooks));
     this.books = newBooks;
     this.displayBooks();
@@ -47,6 +46,19 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
+
+    // check if the book is already in the list 
+    let booksArrays = [];
+    if (localStorage.getItem('books')) {
+      booksArrays = JSON.parse(localStorage.getItem('books'));
+    }
+    for (let i = 0; i < booksArrays.length; i++) {
+      if (booksArrays[i].title === title && booksArrays[i].author === author) {
+        alert('This book is already in your list');
+        return;
+      }
+    }
+
     books.addBook(title, author);
     form.reset();
   });
