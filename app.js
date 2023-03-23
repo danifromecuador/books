@@ -6,13 +6,6 @@ let booksArray = []; // In this array all the new books will be added
 let removeButtonArray = []; // It will contain all the remove buttons
 const addButton = document.querySelector('.add-button');
 
-window.addEventListener('load', () => {
-  if (localStorage.getItem('added-books')) {
-    booksArray = JSON.parse(localStorage.getItem('added-books'));
-    Book.render();
-  }
-});
-
 // the Book class contains: constructor, add, remove, and print methods
 class Book {
   constructor(title, author) {
@@ -66,6 +59,13 @@ class Book {
     }
   }
 }
+
+window.addEventListener('load', () => {
+  if (localStorage.getItem('added-books')) {
+    booksArray = JSON.parse(localStorage.getItem('added-books'));
+    Book.render();
+  }
+});
 
 addButton.addEventListener('click', () => {
   Book.addBook();
