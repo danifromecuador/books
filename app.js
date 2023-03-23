@@ -72,3 +72,5 @@ const titleInput = document.querySelector('#title');
 titleInput.addEventListener('click', () => {
   alertMessage.innerHTML = '';
 });
+
+//let's create something amazing!
