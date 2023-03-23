@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
     }
+    
 
     books.addBook(title, author);
     form.reset();
