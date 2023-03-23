@@ -8,12 +8,12 @@ const addButton = document.querySelector('.add-button');
 
 window.addEventListener('load', () => {
   if (localStorage.getItem('added-books')) {
-    booksArray = JSON.parse(localStorage.getItem('added-books'));   
+    booksArray = JSON.parse(localStorage.getItem('added-books'));
     Book.render();
   }
 });
 
-// the Book class contains: constructor, add, remove, and print methods 
+// the Book class contains: constructor, add, remove, and print methods
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -24,7 +24,7 @@ class Book {
     const newTitle = document.querySelector('.add-title'); // User input
     const newAuthor = document.querySelector('.add-author'); // User input
     if (newTitle.value !== '' && newAuthor.value !== '') {
-      let book = new Book(newTitle.value, newAuthor.value);
+      const book = new Book(newTitle.value, newAuthor.value);
       booksArray.push(book);
       localStorage.setItem('added-books', JSON.stringify(booksArray));
       newTitle.value = '';
@@ -69,6 +69,6 @@ class Book {
 
 addButton.addEventListener('click', () => {
   Book.addBook();
-  Book.render();  
-  removeButtonArray = document.querySelectorAll('.remove-book');  
+  Book.render();
+  removeButtonArray = document.querySelectorAll('.remove-book');
 });
