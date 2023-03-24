@@ -2,32 +2,55 @@
   box-sizing: border-box;
   margin: 0;
   padding: 5px;
+  border: 1px solid red;
 }
 
 body {
   margin: 0 auto;
   max-width: 400px;
-  background-color: black;
-  color: white;
+  background-color: rgb(71, 64, 64);
+  color: rgb(255, 193, 69);
 }
 
-button {
-  cursor: pointer;
-}
-
-.book {
-  display: flex;
-  justify-content: space-between;
-}
-
-.book-details {
-  display: flex;
+hr {
+  padding: 0;
 }
 
 h1,
 h2 {
   text-align: center;
 }
+
+.nav-bar-title {
+  display: flex;
+  align-items: center;
+}
+
+.list-add-contact {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.book {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
 
 .add-title-and-author {
   display: flex;
@@ -36,8 +59,4 @@ h2 {
 
 .add-button-container {
   text-align: right;
-}
-
-.hide {
-  display: none;
 }
