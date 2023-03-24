@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 5px;
+
   /* border: 1px solid red; */
 }
 
@@ -23,7 +24,7 @@ h2 {
 
 .nav-bar,
 footer {
-  border: 1px solid #ffc145 ;
+  border: 1px solid #ffc145;
 }
 
 .nav-bar-title {
@@ -51,7 +52,6 @@ button {
   display: flex;
   justify-content: space-between;
 }
-
 
 .book {
   display: flex;
@@ -86,7 +86,7 @@ footer {
   background-color: #474040;
   display: flex;
   align-items: center;
-  position: fixed;  
+  position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
