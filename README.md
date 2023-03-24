@@ -1,15 +1,15 @@
 # Awesome Books
+
 Welcome to my Awesome Books project
 
 <a name="readme-top"></a>
-
 
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)  
+  - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
@@ -41,6 +41,7 @@ Welcome to my Awesome Books project
 </details>
 
 ### Key Features <a name="key-features"></a>
+
 - **A book contains title and author**
 - **The user can add or delete a book**
 - **The list of books will be preserved in local storage**
@@ -59,15 +60,14 @@ Welcome to my Awesome Books project
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-
 - Step 1: Clone this project using this git comand "git clone", (if you don't have git installed please visit
-https://git-scm.com/downloads and install it).
+  https://git-scm.com/downloads and install it).
 - Step 2: Once you have installed git you can clone this project using the command below:
   ```
   git clone https://github.com/danifromecuador/books
   ```
-- Step 3: Once you have cloned this repo navigate to the folder that contains 
-the repository.
+- Step 3: Once you have cloned this repo navigate to the folder that contains
+  the repository.
 - Step 4: If you want to watch the html file open it with your favorite web browser.
 - Step 5: If you want to edit this project open it with your favorite text editor.
 
@@ -83,12 +83,16 @@ the repository.
 - Twitter: [@danifromecuador](https://twitter.com/danifromecuador)
 - LinkedIn: [danifromecuador](https://www.linkedin.com/in/danifromecuador/)
 
+👤 **Ruben Cuervo**
+
+- GitHub: [@Jrmcuervom](https://github.com/Jrcuervom)
+- Twitter: [@Jrmcuervom](https://twitter.com/Jrcuervom)
+- LinkedIn: [Jrmcuervom](https://www.linkedin.com/in/Jrcuervom/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
 
 - If a book is actually added the user can't add it again
 - The books could be ordered by author
@@ -108,8 +112,6 @@ Feel free to check the [issues page](../../issues/).
 <!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
-
-
 
 If you like this Awesome Books project please share my portfolio with recruters!
 

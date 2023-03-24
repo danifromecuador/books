@@ -36,8 +36,8 @@ class Book {
       const html = `
         <div class="book">
           <div class="book-details">
-            <div class="title">"${booksArray[i].title}" by</div>
-            <div class="author">${booksArray[i].author}</div>
+            <div class="title">"${booksArray[i].title}" by&nbsp;</div>
+            <div class="author"> ${booksArray[i].author}</div>
           </div>
           <div class="remove-container">
             <button class="remove-book">Remove</button>

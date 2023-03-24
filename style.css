@@ -1,14 +1,11 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 5px;
-
-  /* border: 1px solid red; */
+  padding: 0;
 }
 
 body {
   margin: 0 auto;
-  width: 400px;
   background-color: #474040;
   color: #ffc145;
 }
@@ -20,11 +17,13 @@ hr {
 h1,
 h2 {
   text-align: center;
+  padding: 1.5rem 0;
 }
 
 .nav-bar,
 footer {
   border: 1px solid #ffc145;
+  padding: 0.5rem 1rem;
 }
 
 .nav-bar-title {
@@ -34,6 +33,7 @@ footer {
 
 .list-add-contact {
   display: flex;
+  gap: 0.5rem;
 }
 
 ul {
@@ -55,7 +55,12 @@ button {
 
 .book {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 5px;
 }
 
 .book-details {
@@ -65,16 +70,32 @@ button {
 .add-title-and-author {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  padding-top: 2rem;
   row-gap: 10px;
+  max-width: 200px;
 }
 
 .add-button-container {
   text-align: right;
 }
 
-.contact ul {
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.contact ul,
+.contact p {
   padding-left: 50px;
+  padding-bottom: 1rem;
   list-style: circle;
+  margin: 0 auto;
+}
+
+.contact li {
+  padding: 5px 0;
 }
 
 .main {
@@ -90,7 +111,7 @@ footer {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
+  width: 100%;
   height: 50px;
 }
 
