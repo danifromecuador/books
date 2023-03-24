@@ -2,14 +2,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 5px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 body {
   margin: 0 auto;
-  max-width: 400px;
-  background-color: rgb(71, 64, 64);
-  color: rgb(255, 193, 69);
+  width: 400px;
+  background-color: #474040;
+  color: #ffc145;
 }
 
 hr {
@@ -19,6 +19,11 @@ hr {
 h1,
 h2 {
   text-align: center;
+}
+
+.nav-bar,
+footer {
+  border: 1px solid #ffc145 ;
 }
 
 .nav-bar-title {
@@ -32,6 +37,10 @@ h2 {
 
 ul {
   list-style: none;
+}
+
+li {
+  cursor: pointer;
 }
 
 button {
@@ -49,14 +58,44 @@ button {
   justify-content: space-between;
 }
 
-
-
+.book-details {
+  display: flex;
+}
 
 .add-title-and-author {
   display: flex;
   flex-direction: column;
+  row-gap: 10px;
 }
 
 .add-button-container {
   text-align: right;
+}
+
+.contact ul {
+  padding-left: 50px;
+  list-style: circle;
+}
+
+.main {
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: #474040;
+  display: flex;
+  align-items: center;
+  position: fixed;  
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 50px;
+}
+
+
+/* ////////////////// DOM //////////////// */
+.hide {
+  display: none;
 }
