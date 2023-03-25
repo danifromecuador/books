@@ -6,6 +6,9 @@ let booksArray = []; // In this array all the new books will be added
 let removeButtonArray = []; // It will contain all the remove buttons
 const addButton = document.querySelector('.add-button');
 
+const newTitle = document.querySelector('.add-title'); // User input
+const newAuthor = document.querySelector('.add-author'); // User input
+
 // the Book class contains: constructor, add, remove, and print methods
 class Book {
   constructor(title, author) {
@@ -14,8 +17,6 @@ class Book {
   }
 
   static addBook() {
-    const newTitle = document.querySelector('.add-title'); // User input
-    const newAuthor = document.querySelector('.add-author'); // User input
     if (newTitle.value !== '' && newAuthor.value !== '') {
       const book = new Book(newTitle.value, newAuthor.value);
       booksArray.push(book);
@@ -68,7 +69,20 @@ window.addEventListener('load', () => {
 });
 
 addButton.addEventListener('click', () => {
-  Book.addBook();
+  let theBookAlreadyExists = false;
+  for (i in booksArray) {
+    if (booksArray[i].title === newTitle.value && booksArray[i].author === newAuthor.value)
+    {
+      theBookAlreadyExists = true;      
+      let alertMessage = document.querySelector('.alert-message');
+      alertMessage.innerHTML = 'Book already exists, please add another title or author';
+      newTitle.value = '';
+      newAuthor.value = '';
+    }    
+  }
+  if (!theBookAlreadyExists) {
+    Book.addBook();
+  }  
   Book.render();
   removeButtonArray = document.querySelectorAll('.remove-book');
 });
