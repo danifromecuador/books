@@ -68,20 +68,27 @@ window.addEventListener('load', () => {
   }
 });
 
+
+      
+let alertMessage = document.querySelector('.alert-message');
 addButton.addEventListener('click', () => {
   let theBookAlreadyExists = false;
   for (i in booksArray) {
     if (booksArray[i].title === newTitle.value && booksArray[i].author === newAuthor.value)
     {
-      theBookAlreadyExists = true;      
-      let alertMessage = document.querySelector('.alert-message');
-      alertMessage.innerHTML = 'Book already exists, please add another title or author';
-      newTitle.value = '';
-      newAuthor.value = '';
+      theBookAlreadyExists = true;
+      alertMessage.innerHTML = 'That book already exists, please add another title or author';
+      newTitle.addEventListener('click', () => {
+        newTitle.value = '';
+      });
+      newAuthor.addEventListener('click', () => {
+        newAuthor.value = '';
+      });
     }    
   }
   if (!theBookAlreadyExists) {
     Book.addBook();
+    alertMessage.innerHTML = '';
   }  
   Book.render();
   removeButtonArray = document.querySelectorAll('.remove-book');
