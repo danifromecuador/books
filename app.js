@@ -68,14 +68,11 @@ window.addEventListener('load', () => {
   }
 });
 
-
-      
-let alertMessage = document.querySelector('.alert-message');
+const alertMessage = document.querySelector('.alert-message');
 addButton.addEventListener('click', () => {
   let theBookAlreadyExists = false;
-  for (i in booksArray) {
-    if (booksArray[i].title === newTitle.value && booksArray[i].author === newAuthor.value)
-    {
+  for (let i = 0; i < booksArray.length; i += 1) {
+    if (booksArray[i].title === newTitle.value && booksArray[i].author === newAuthor.value) {
       theBookAlreadyExists = true;
       alertMessage.innerHTML = 'That book already exists, please add another title or author';
       newTitle.addEventListener('click', () => {
@@ -84,12 +81,12 @@ addButton.addEventListener('click', () => {
       newAuthor.addEventListener('click', () => {
         newAuthor.value = '';
       });
-    }    
+    }
   }
   if (!theBookAlreadyExists) {
     Book.addBook();
     alertMessage.innerHTML = '';
-  }  
+  }
   Book.render();
   removeButtonArray = document.querySelectorAll('.remove-book');
 });
